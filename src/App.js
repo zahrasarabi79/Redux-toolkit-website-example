@@ -1,9 +1,10 @@
 import PostsLists from "./features/posts/PostsLists";
+import AddPostForm from "./features/posts/AddPostForm";
 
-PostsLists;
 function App() {
   return (
     <main className="App">
+      <AddPostForm />
       <PostsLists />
     </main>
   );
