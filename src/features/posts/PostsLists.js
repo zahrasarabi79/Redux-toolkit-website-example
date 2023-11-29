@@ -1,7 +1,9 @@
 import { useSelector } from "react-redux";
 import { selectAllPosts } from "./postsSlice";
+import ReactionButton from "./ReactionButton";
 import PostAuthor from "./PostAuthor";
 import TimeAgo from "./TimeAgo";
+
 const PostsLists = () => {
   const posts = useSelector(selectAllPosts);
   const orderedPost = posts.slice().sort((a, b) => b.date.localeCompare(a.date));
@@ -14,6 +16,7 @@ const PostsLists = () => {
           <PostAuthor userId={post.userId} />
           <TimeAgo timestamp={post.date} />
         </p>
+        <ReactionButton post={post} />
       </article>
     );
   });
