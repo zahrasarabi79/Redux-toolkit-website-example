@@ -4,7 +4,7 @@ import SinglePostPage from "./features/posts/SinglePostPage";
 import Layout from "./Components/Layout";
 import UsersList from "./features/users/UsersList";
 import UserPage from "./features/users/UserPage";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import EditPostForm from "./features/posts/EditPostForm";
 function App() {
   return (
